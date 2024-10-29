@@ -1,15 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import { AllDiv, 
+         HeaderDiv,
+         ButtonDiv } from './styled';
+
+let login = false;
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <AllDiv>
+      <HeaderDiv>
+        <ButtonDiv $buttonWidth={60} $buttonHeight={30}>LOGIN</ButtonDiv>
+        <h1>Land of Adventures</h1>
+        <ButtonDiv $buttonWidth={104} $buttonHeight={40}>CHARACTER MANAGER</ButtonDiv>
+      </HeaderDiv>
+    </AllDiv>
   </React.StrictMode>
 );
 
